@@ -24,7 +24,7 @@ def test_create_file_string():
 def test_get_most_hours_one():
     user_dictionary = {'Sean': 10, 'Nate': 0, 'Evil Nate': 0}
     username = get_most_hours(user_dictionary)
-    assert username == 'Sean'
+    assert username == ['Sean']
 
 
 def test_get_most_hours_multiple():
