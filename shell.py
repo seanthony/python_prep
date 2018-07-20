@@ -29,11 +29,14 @@ def get_hours():
 
 
 def main():
-    roster_raw_info = disk.open_file('./roster.txt')
+    filename = './roster.txt'
+    roster_raw_info = disk.open_file(filename)
     user_dictionary = core.create_user_dictionary(roster_raw_info)
     username = get_username(user_dictionary)
     hours = get_hours()
     core.add_hours(user_dictionary, username, hours)
+    file_string = core.create_file_string(user_dictionary)
+    disk.write_file(filename, file_string)
 
 
 if __name__ == '__main__':
