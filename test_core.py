@@ -30,5 +30,5 @@ def test_get_most_hours_one():
 def test_get_most_hours_multiple():
     user_dictionary = {'Sean': 10, 'Nate': 10, 'Evil Nate': 10}
     username = get_most_hours(user_dictionary)
-    sorted(username)
+    username.sort()
     assert username == ['Evil Nate', 'Nate', 'Sean']

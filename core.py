@@ -23,3 +23,16 @@ def create_file_string(user_dictionary):
     for name, hours in user_dictionary.items():
         file_string += '\n{}, {}'.format(name, hours)
     return file_string
+
+
+def get_most_hours(user_dictionary):
+    ''' {str: int} -> [str]
+    returns a list of the username with the most hours
+    will return multiple names if the same
+    '''
+    max_hours = max(user_dictionary.values())
+    users = []
+    for user in user_dictionary.keys():
+        if user_dictionary.get(user) == max_hours:
+            users.append(user)
+    return users
