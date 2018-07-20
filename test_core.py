@@ -16,6 +16,6 @@ def test_add_hours():
 
 
 def test_create_file_string():
-    user_dictionary = {'Sean': 10, 'Nate': 0, 'Evil Nate': 0}
+    user_dictionary = {'Sean': 10}
     file_string = create_file_string(user_dictionary)
-    assert file_string == 'name, hours\nSean, 0\nNate, 0\nEvil Nate, 0'
+    assert file_string == 'name, hours\nSean, 10'

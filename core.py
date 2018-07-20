@@ -13,3 +13,13 @@ def add_hours(user_dictionary, username, hours):
     updates user_dictionary with an increase in hours
     '''
     user_dictionary[username] += hours
+
+
+def create_file_string(user_dictionary):
+    ''' {str: int} -> str
+    turns the user_dictionary into a string
+    '''
+    file_string = 'name, hours'
+    for name, hours in user_dictionary.items():
+        file_string += '\n{}, {}'.format(name, hours)
+    return file_string
