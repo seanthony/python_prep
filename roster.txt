@@ -1,0 +1,4 @@
+name, hours
+Sean, 0
+Nate, 0
+Evil Nate, 0
